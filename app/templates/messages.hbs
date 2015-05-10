@@ -1,0 +1,12 @@
+<ul class="message-preview-pane sidebar">
+{{#each model as |message|}}
+  <li class="message-preview-item" {{action "editMessage" message}}>
+    <strong>{{message.user.name}}</strong> –
+    {{message.bodySummary}}
+  </li>
+{{/each}}
+</ul>
+
+<section class="primary-content">
+  {{outlet}}
+</section>

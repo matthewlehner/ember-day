@@ -1,0 +1,9 @@
+<div>
+  {{textarea value=model.body}}
+  <button {{ action "updateMessage"}}>Save</button>
+  <button {{ action "rollbackMessage"}}>Cancel</button>
+
+  <hr>
+  <div>{{model.score}}</div>
+  {{score-button-group currentGrade=model.score}}
+</div>

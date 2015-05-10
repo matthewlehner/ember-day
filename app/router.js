@@ -6,4 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
+  this.route('about');
+  this.route('messages', function () {
+    this.route('edit', { path: ':message_id' });
+  });
 });

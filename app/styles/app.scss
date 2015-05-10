@@ -1,5 +1,50 @@
-body {
-  h2 {
-    color: purple;
+@import "bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "base/base";
+@import "bower_components/neat/app/assets/stylesheets/neat";
+
+.global-nav {
+  border-bottom: $base-border;
+  margin-bottom: 2rem;
+  text-align: right;
+}
+
+main,
+.global-nav {
+  @include outer-container;
+}
+
+.sidebar {
+  @include span-columns(4 of 12);
+  border-right: $base-border;
+}
+
+.primary-content {
+  @include span-columns(8 of 12);
+}
+
+.message-preview-item {
+  border-bottom: $base-border;
+  padding: 15px;
+
+  &:hover {
+    background-color: $light-gray;
+    cursor: pointer;
   }
+}
+
+textarea {
+  height: 150px;
+}
+
+.grade-btn {
+  display: inline-block;
+}
+
+.selected,
+.selected:focus {
+  background: red;
+}
+
+.ember-view {
+  display: inline;
 }
